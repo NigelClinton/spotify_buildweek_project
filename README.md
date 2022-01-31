@@ -1,5 +1,9 @@
 # Spotify Song Predictor
 Lambda School - DS UNIT 4 Build Week Project
+Deployed App
+
+# Application Link
+[Spotify Song Predictor](https://spotify-buildweek-unit3.herokuapp.com/)
 
 # Decription
 This application predicts which songs are most similar to an user input song title. Using the Spotify API, various features of the song input are analyzed using a euclidian distance analysis of the audio features.
