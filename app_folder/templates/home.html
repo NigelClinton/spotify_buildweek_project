@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="static/style.css">
+		<title>Spotify Song Recommender</title>
+	</head>
+	<body>
+
+		<!-- Navbar -->
+        <nav class="navbar navbar-expand-lg bg-success navbar-dark py-3 fixed-top">
+            <div class="container">
+                <a href="/" class="navbar-brand">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="/predictor" class="nav-link">Song Prediction</a>
+						<li class="nav-item">
+                            <a href="#learn" class="nav-link">Learn More</a>
+						</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+		<!-- Get Started -->
+        <section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+            <div class="container">
+                <div class="d-sm-flex align-items-center justify-content-between">
+                    <div>
+                        <h1>Discover<span class="text-success">
+                            New Songs
+                        </span></h1>
+                        <p class="lead my-4">
+                            Have you ever had a moment in your life where you wanted to find new music, but you didn't know where to look? We've created the tool just for these moments. This application allows a user to input a song and artist and then receive 10 song recommendations with similar audio features.
+                        </p>
+                        <a href="/predictor" class="btn btn-success btn-lg active" role="button">Get Started</a>
+                    </div>
+                    <img class="img-fluid w-50 d-none d-sm-block" src="static/music.svg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- Learn Section -->
+        <section id="learn" class="p-5">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-md">
+                        <img src="static/learn.svg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md p-5">
+                        <h2>Learn About Euclidean Distance</h2>
+                        <p class="lead">
+                            Using Euclidean Distance to Recommend Songs
+                        </p>
+                        <p>
+                            Behind the scenes, a dataset of 500k songs is filtered down to only include songs that are approximately the same release year as the user's input. Then 100 of these songs are randomly sampled, and the euclidean distance is computed for each of these 100 songs to determine which 10 songs are closest to the input song in a multi-dimensional space. The 10 songs with the smallest euclidean distance between their audio features and the input song's audio features will be suggested. The features of each song are numerical and they quantify metrics like tempo, danceability, liveliness, etc.
+                        </p>
+                        <a href="https://hlab.stanford.edu/brian/euclidean_distance_in.html" class="btn btn-success mt-3">
+                        <i class="bi bi-chevron-right"></i> Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="p-5 bg-dark text-white text-center position-ralative">
+            <div class="container">
+                <p class="lead">Copyright &copy; 2021 Spotify Build Week Team</p>
+            </div>
+        </footer>
+
+	</body>
+</html>
