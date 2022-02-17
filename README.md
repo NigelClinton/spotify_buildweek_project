@@ -17,13 +17,11 @@ This application predicts which songs are most similar to an user input song tit
 The goal of this project is to provide users with the ability to discover new music according to their favorite songs through the analysis of various features of the songs.
 
 # Usage
-
-Built with
-
 The languages used for this project include:
 
 * Python
 * HTML/CSS
+
 The packages used include:
 
 * Pandas
